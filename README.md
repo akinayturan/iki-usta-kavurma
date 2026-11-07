@@ -19,4 +19,13 @@ Fiyatlar örnektir. Kesin adres, telefon ve çalışma saatleri henüz verilmedi
 
 Yayın adresi: https://akinayturan.github.io/iki-usta-kavurma/
 
-Depo ve web sitesi herkese açıktır. `.github/workflows/pages.yml`, `main` dalındaki `dist/` değişikliklerinde statik siteyi GitHub Pages'e yükler. Depo ayarlarında Pages kaynağı **GitHub Actions** olmalıdır. İş akışı elle de başlatılabilir.
+Depo ve web sitesi herkese açıktır. GitHub Pages, **Deploy from a branch → gh-pages → / (root)** ayarıyla statik dosyaları yayınlar. `main` dalı kaynakları, `gh-pages` dalı yalnızca `dist/` içeriğini taşır. Güncelleme sonrası yayınlamak için:
+
+```sh
+git push origin main
+git subtree split --prefix dist -b pages-update
+git push origin pages-update:gh-pages
+git branch -D pages-update
+```
+
+Özel Actions iş akışı, hesapta bildirilen faturalandırma engeli nedeniyle kullanılmıyor; yayın GitHub Pages'in yerleşik dal yayınıyla yapılandırılmıştır.
