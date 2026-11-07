@@ -14,3 +14,9 @@ Emek, Ankara için hazırlanmış, bağımlılık veya derleme gerektirmeyen Tü
 - Logo ve temsili yemek görseli: `dist/assets/`.
 
 Fiyatlar örnektir. Kesin adres, telefon ve çalışma saatleri henüz verilmediğinden eklenmemiştir. Sipariş veya ödeme alınmaz. Sayfa açılış öncesi konsepttir; arama motoru indekslemesi kapalıdır. Harita çizimi şematiktir. Yemek görseli yapay zekâyla üretilmiş temsili sunumdur. Google Fonts erişilemezse sistem yazı tipleri kullanılır.
+
+## GitHub Pages
+
+Yayın adresi: https://akinayturan.github.io/iki-usta-kavurma/
+
+Depo ve web sitesi herkese açıktır. `.github/workflows/pages.yml`, `main` dalındaki `dist/` değişikliklerinde statik siteyi GitHub Pages'e yükler. Depo ayarlarında Pages kaynağı **GitHub Actions** olmalıdır. İş akışı elle de başlatılabilir.
